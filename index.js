@@ -58,19 +58,18 @@ function extractFieldsFromSQL(sql) {
                     hashId: hashId, 
                     name: name,
                 });
-                console.log(` `);
-                console.log(`Querying       : \x1b[33m${account.addr}\x1b[0m`);
+                console.log(`\x1b[32m================(QUERY UNIQUE VIEW)===============\x1b[0m`);
                 console.log(`Status         : ${response1.status}`);
                 console.log(`Function       : ${response1.function || "None"}`);
                 console.log(` `);
                 console.log(`[View Details]`);
-                console.log(`Hash ID        : ${response1.view.hashId}`);
-                console.log(`Name           : ${response1.view.name}`);
+                console.log(`Hash ID        : \x1b[31m${response1.view.hashId}\x1b[0m`);
+                console.log(`Name           : \x1b[31m${response1.view.name}\x1b[0m`);
                 console.log(`Description    : ${response1.view.description || "No description available"}`);
                 console.log(`Identifier     : ${response1.view.identifier}`);
                 console.log(`SQL            : ${response1.view.sql}`);
                 console.log(` `);
-                console.log(`Creator        : \x1b[32m$${response1.view.creator}\x1b[0m`);
+                console.log(`Creator        : \x1b[32m${response1.view.creator}\x1b[0m`);
                 console.log(`References     : ${response1.view.references.length} reference(s)`);
                 console.log(` `);
 
